@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route  } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 import Home from "./routes/Home"
 import AboutUs from "./routes/AboutUs"
 import Blogs from "./routes/Blogs"
@@ -9,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route  path="/team" element={<Teams />} />
@@ -18,7 +19,7 @@ function App() {
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/services" element={<Services />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
